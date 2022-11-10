@@ -1,0 +1,25 @@
+{
+  "shop_id": "1002",
+  "shop_name": " Jai Ganesh Tea Stall",
+  "owner": "Rohit More",
+  "products": {
+    "1": {
+      "name": "tea",
+      "price": 10,
+      "stock": 0,
+      "qty_type": "unit"
+    },
+    "2": {
+      "name": "Cream Roll",
+      "price": 10,
+      "stock": 50,
+      "qty_type": "unit"
+    },
+    "3": {
+      "name": "Coffee",
+      "price": 25,
+      "stock": 0,
+      "qty_type": "Unit"
+    }
+  }
+}
