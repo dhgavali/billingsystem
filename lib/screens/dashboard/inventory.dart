@@ -34,14 +34,10 @@ class _InventoryPageState extends State<InventoryPage> {
               if (snapshot.hasData) {
                 // Map<String, dynamic> data =
                 // snapshot.data!.docss Map<String, dynamic>;
-
                 // var data = snapshot.data!.docs[0].data()['price']!;
                 // print(data);
                 final List<DocumentSnapshot> documents = snapshot.data!.docs;
                 print(documents);
-
-                
-
                 return ListView(
                     children: documents
                         .map((doc) => Card(

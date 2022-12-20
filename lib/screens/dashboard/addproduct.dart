@@ -1,12 +1,9 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dbmsapp/components/buttons.dart';
 import 'package:dbmsapp/components/txtfields.dart';
 import 'package:dbmsapp/constants.dart';
-import 'package:dbmsapp/services/auth.dart';
 import 'package:dbmsapp/services/db.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 // import 'dart:io' show Platform;
 // import 'package:mongo_dart/mongo_dart.dart';
 
@@ -101,7 +98,9 @@ class _AddProductState extends State<AddProduct> {
               Map<String, dynamic> data = _showStock ? data2 : data1;
 
               DbServices db = DbServices();
-              await db.addProduct(json: data);
+              await db.addProduct(
+                json: data,
+              );
 
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
@@ -122,7 +121,7 @@ class _AddProductState extends State<AddProduct> {
         Consts.h5(title: "Quantity Type"),
         Container(
           width: 300,
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
